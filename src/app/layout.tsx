@@ -5,6 +5,7 @@ import { Root } from "@/components/Root/Root";
 
 import "@telegram-apps/telegram-ui/dist/styles.css";
 import "normalize.css/normalize.css";
+import { BottomMenu } from "@/components/BottomMenu/BottomMenu";
 // import "./_assets/globals.css";
 
 export const metadata: Metadata = {
@@ -16,7 +17,10 @@ export default async function RootLayout({ children }: PropsWithChildren) {
   return (
     <html suppressHydrationWarning>
       <body>
-        <Root>{children}</Root>
+        <Root>
+          {children}
+          <BottomMenu />
+        </Root>
       </body>
     </html>
   );
